@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "6153a894-e499-4071-8138-f57c1ed88699",
+		"name": "Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10636051"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"first_name\":\"Deepansh\",\n   \"last_name\":\"Gupta\",\n   \"password\":\"1234\",\n   \"email\":\"deep@gmail.com\",\n   \"user_type\":\"Admin\",\n   \"phone\":\"12312312312\",\n   \"dob\":\"10-03-1010\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"password\":\"1234\",\n   \"email\":\"deep@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserDetail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImRlZXBAZ21haWwuY29tIiwiRmlyc3RfbmFtZSI6IkRlZXBhbnNoIiwiTGFzdF9uYW1lIjoiR3VwdGEiLCJVc2VyX3R5cGUiOiJBZG1pbiIsImV4cCI6MTY1OTE4Njg4M30.pDe7ySSWlsrDb33M_J0cHNs8Qop8AM9jsROIVDoqeAI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/user/:user_id",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						":user_id"
+					],
+					"variable": [
+						{
+							"key": "user_id",
+							"value": "deep@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user details",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImRlZXBAZ21haWwuY29tIiwiRmlyc3RfbmFtZSI6IkRlZXBhbnNoIiwiTGFzdF9uYW1lIjoiR3VwdGEiLCJVc2VyX3R5cGUiOiJBZG1pbiIsImV4cCI6MTY1OTE4ODQ1Mn0.7JRs5X4B2PTb2BW_RyQnGMax2-jxJ8sz0JZAC-n5oTI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \"phone\":\"9654346513\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/user/:user_id",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						":user_id"
+					],
+					"variable": [
+						{
+							"key": "user_id",
+							"value": "deep@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Account",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImRlZXAxMkBnbWFpbC5jb20iLCJGaXJzdF9uYW1lIjoiRGVlcGFuc2giLCJMYXN0X25hbWUiOiJHdXB0YSIsIlVzZXJfdHlwZSI6IlVzZXIiLCJleHAiOjE2NTkxODk0MTR9.3F-ocg7HxBR_aZvay5IsuB9VozkiXcMy_J-Z79T5fNQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/user/:user_id",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						":user_id"
+					],
+					"variable": [
+						{
+							"key": "user_id",
+							"value": "deep12@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
